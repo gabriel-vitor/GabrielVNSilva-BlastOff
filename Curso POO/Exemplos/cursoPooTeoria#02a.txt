@@ -1,0 +1,56 @@
+Objetos concretos:
+
+Cadeira giratória
+	atributos
+	-couro
+	-rodas
+	-apoio de braços
+	
+	métodos
+	-girar
+	-sentar
+
+	estado
+	-velha
+	-limpa
+
+Ventilador
+	atributos
+	-tomada
+	-hélice
+	-botão
+
+	métodos
+	-ventilar
+	-oscilar
+
+	estado
+	-empoeirado
+
+Objetos abstratos:
+
+Música	
+	atributos
+	-som
+	-melodia
+	-letra
+
+	métodos
+	-transmitir ondas sonoras
+
+	Estado
+	-antiga
+	-nova
+
+Emprego
+	atributos
+	-contratante
+	-funcionário
+
+	métodos
+	-prestar serviço
+
+	Estado
+	-junior
+	-pleno
+	-senior
