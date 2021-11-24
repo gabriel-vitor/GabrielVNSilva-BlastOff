@@ -1,4 +1,4 @@
-Objetos concretos:
+Concretos:
 
 Cadeira giratória
 	atributos
@@ -27,7 +27,7 @@ Ventilador
 	estado
 	-empoeirado
 
-Objetos abstratos:
+Abstratos:
 
 Música	
 	atributos
