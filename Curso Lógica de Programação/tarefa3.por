@@ -18,7 +18,8 @@ programa {
 			escreva("financiamento concedido")
 		senao
 			escreva("financiamento negado")
-	
+			
+		escreva("\nObrigado por nos consultar")
 		}
 		
 }
@@ -30,7 +31,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 385; 
+ * @POSICAO-CURSOR = 234; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
