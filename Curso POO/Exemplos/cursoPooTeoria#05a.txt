@@ -1,0 +1,119 @@
+Classe ContaBanco
+	//Atributos
+	publico numConta: Inteiro
+	protegido tipo: Caractere
+	privado dono: Caractere
+	privado saldo: Real
+	privado status: Logico
+
+	//Metodos Especiais
+	public Metodo Construtor()
+		saldo = 0
+		status = falso
+	FimMetodo
+
+	public Metodo setNumConta(n:Inteiro)
+		numConta = n
+	FimMetodo
+
+	publico Metodo getNumConta()
+		retorne numConta
+	FimMetodo
+
+	publico Metodo setTipo(t:Caractere)
+		tipo = t
+	FimMetodo
+
+	publico Metodo getTipo()
+		retorne tipo
+	FimMetodo
+
+	publico Metodo setDono(d:Caractere)
+		dono = d
+	FimMetodo
+
+	publico Metodo getDono()
+		retorne dono
+	FimMetodo
+
+	publico Metodo setSaldo(s:Real)
+		saldo = s
+	FimMetodo
+
+	publico Metodo getSaldo()
+		retorne saldo
+	FimMetodo
+
+	publico Metodo setStatus(s:Logico)
+		status = s
+	FimMetodo
+
+	publico Metodo getStatus()
+		retorne status
+	FimMetodo
+
+
+	//Métodos
+	publico Metodo abrirConta(t:Caractere)
+		setTipo(t)
+		setStatus(verdadeiro)
+		se (t = "CC") entao
+			setSaldo(50)
+		senao se (t = "CP") entao
+			setSaldo(150)
+		FimSe
+	FimMetodo
+
+	publico Metodo fecharConta()
+		se (saldo > 0) entao
+			Escreva("Conta com dinheiro")  //não é aconselhavél que tenha prints dentro do método
+		senao se (saldo <0) entao
+			Escreva("Conta em débito")
+		senao
+			setStatus(false)
+	FimMetodo
+
+	publico Metodo depositar(v:Real)
+		se (getStatus) entao
+			setSaldo(getSaldo() + v)
+		senao
+			Escreva("Impossível depositar")
+		FimSe
+	FimMetodo
+
+	publico Metodo sacar(v: Real)
+		se (getStatus) entao
+			se (saldo > v) entao
+				setSaldo(getSaldo() - v)
+			senao
+				Escreva("saldo insuficiente")
+			FimSe
+		senao
+			Escreva("impossível sacar")
+		FimSe
+	FimMetodo
+
+	publico Metodo pagarMensal()
+		var v: Real
+		se (tipo + "CC") entao
+			v = 12
+		senao se (tipo = "CP") entao
+			v = 20
+		fimSe
+
+		se (getStatus) entao
+			se (saldo > v) entao
+				saldo = saldo - v
+			senao
+				Escreva("saldo insuficiente")
+			FimSe
+		senao
+			Escreva("impossivel pagar")
+		FimSe
+
+	FimMetodo
+
+
+
+
+FimClasse
