@@ -1,0 +1,245 @@
+classe Lutador
+
+	//Atributos
+	privado nome : Caractere
+	privado nacionalidade : Caractere
+	privado idade : Inteiro
+	privado altura : Real
+	privado peso : Real
+	privado categoria : Caractere
+	privado vitorias : Inteiro
+	privado derrotas : Inteiro
+	privado empates : Inteiro
+
+	//Métodos Especiais
+	publico Metodo construtor(no: Caractere, na: Caractere, id: Inteiro, al: Real, vi: Inteiro, de: Inteiro, em:Inteiro)
+		nome = no
+		nacionalidade = na
+		idade = id
+		altura = al
+		setPeso(pe)
+		vitorias = vi
+		derrotas = de
+		empates = em
+
+	publico Metodo getNome()
+		retorne nome
+	FimMetodo
+
+	publico Metodo setNome(no: Caractere)
+		nome = no
+	FimMetodo
+
+	publico Metodo getNacionalidade()
+		retorne nacionalidade
+	FimMetodo
+
+	publico Metodo setNacionalidade(na: Caractere) //nao faz sentido alterar a nacionalidade
+		nacionalidade = na
+	FimMetodo
+
+	publico Metodo getIdade()
+		retorne idade
+	FimMetodo
+
+	publico Metodo setIdade(id: Inteiro)
+		idade = id
+	FimMetodo
+
+	publico Metodo getAltura()
+		retorne altura
+	FimMetodo
+
+	publico Metodo setAltura(al: Real)
+		altura = al
+	FimMetodo
+
+	publico Metodo getPeso()
+		retorne peso
+	FimMetodo
+
+	publico Metodo setPeso(pe: Caractere)
+		peso = pe
+		setCategoria()
+	FimMetodo
+
+	publico Metodo getCategoria()
+		retorne categoria
+	FimMetodo
+
+
+	publico Metodo setCategoria()
+		se (peso < 52.2) entao
+			categoria = "invalido"
+		enao se (peso < = 70.3) entao
+			categoria = "leve"	
+		senao se (peso <= 83.9) entao
+			categoria = "medio"
+		senao se (peso <= 120.2) entao
+			categoria = "pesado"
+		senao
+			categoria = "invalido"
+		FimSe
+
+	publico Metodo getVitorias()
+		retorne vitorias
+	FimMetodo
+
+	publico Metodo setVitorias(vi: Inteiro)
+		vitorias = vi
+	FimMetodo
+
+	publico Metodo getDerrotas()
+		retorne derrotas
+	FimMetodo
+
+	publico Metodo setDerrotas()
+		derrotas = de
+	FimMetodo
+
+	publico Metodo getEmpates()
+		empates = em
+	FimMetodo
+
+	publico Metodo setEmpates()
+		empates = em
+	FimMetodo
+
+	//Métodos
+	publico Metodo apresentar()
+		Escreva("Lutador: ", getNome())
+		Escreva("Origem: ", getNacionalidade())
+		Escreva("Idade: ", getIdade(), "anos")
+		Escreva("Altura: ", getAltura(), "m de altura")
+		Escreva("Pesando: ", getPeso(), "Kg")
+		Escreva("Ganhou:", getVitorias())
+		Escreva("Perdeu: ". getDerrotas())
+		Escreva("Empatou: ", getEmpates())
+	FimMetodo
+
+	publico Metodo status()
+		Escreva(getNome())
+		Escreva("é um peso", getCategoria())
+		Escreva(getVitorias(), "vitórias")
+		Escreva(getDerrotas(), "derrotas")
+		Escreva(getEmpates(), "empates")
+	FimMetodo
+
+	publico Metodo ganharLuta()
+		setVitorias(getVitorias() + 1)
+	FimMetodo
+
+	publico Metodo perderLuta()
+		setDerrotas(getDerrotas() + 1)
+	FimMetodo
+
+	publico Metodo empatarLuta()
+		setEmpates(getEmpates() + 1)
+	FimMetodo
+
+FimClasse
+
+Classe Luta
+	//Atributos
+	privado desafiado : Lutador
+	privado desafiante : Lutador
+	privado rounds : Inteiro
+	privado aprovada : Logico
+
+	//Metodos Especiais
+	publico Metodo setDesafiado(dd: Lutador)
+		desafiado = dd
+	FimMetodo
+
+	publico Metodo getDesafiado()
+		retorne desafiado
+	FimMetodo
+
+	publico Metodo setDesafiante(df: Lutador)
+		desafiante = df
+	FimMetodo
+
+	publico Metodo getDesafiante()
+		retorne desafiante
+	FimMetodo
+
+	publico Metodo setRounds(ro: Inteiro)
+		rounds = ro
+	FimMetodo
+
+	publico Metodo getRounds()
+		retorne rounds
+	FimMetodo
+
+	publico Metodo setAprovada(ap: Logico)
+		aprovada = ap
+	FimMetodo
+
+	publico Metodo getAprovada()
+		retorne aprovada
+	FimMetodo
+
+
+
+	//Metodos
+	publico Metodo marcarLuta(l1, l2: Lutador)
+		se (l1.getCategoria() = l2.getCategoria()) e (l1 <> l2) entao
+			aprovada = verdadeiro
+			desafiado = l1
+			desafiante = l2
+		senao
+			aprovada = falso
+			desafiado = nulo
+			desafiante = nulo
+		fimse
+	FimMetodo
+
+	publico Metodo lutar()	
+		se (aprovada)
+			desafiado.apresentar()
+			desafiante.apresentar()
+			vencedor = aleatorio(0..2)
+
+			escolha(vencedor)
+				caso 0: //Empate
+					Escreva("Empate")
+					desafiado.empatarLuta()
+					desafiante.empatarLuta()
+
+				caso 1: //Ganhou desafiado
+					Escreva("Desafiado ganhou: ", desafiado.getNome())
+					desafiado.ganharLuta()
+					desafiante.perderLuta()
+
+				caso 2: //Ganhou desafiante
+					Escreva("desafiante ganhou: ", desafiante.getNome())
+					desafiante.ganharLuta()
+					desafiado.perderLuta()
+
+			fim escolha
+
+		senao
+			Escreva("Luta nao pode acontecer")
+		fimse
+	FimMetodo
+
+FimClasse
+
+
+
+
+//Programa principal
+
+L: vetor[0..3] //4 lutadores
+
+L[0] = novo Lutador("Pretty Boy", "França", 31, 1.75, 68.9, 11, 3, 1)
+L[1] = novo Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3)
+L[2] = novo Lutador("Snapshadow", "EUA", 35, 1.65, 80.9, 12, 2, 1)
+L[3] = novo Lutador("Dead Code", "Australia", 28, 1.93, 81.6, 12, 0, 2)
+
+L[0].apresentar()
+L[1].status()
+
+UEC01 = novo Luta()
+UEC01.marcarLuta(L[0], L[1])
+UEC01.lutar()
