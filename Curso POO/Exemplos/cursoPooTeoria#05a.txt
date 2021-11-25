@@ -1,3 +1,5 @@
+//portugues estruturado
+
 Classe ContaBanco
 	//Atributos
 	publico numConta: Inteiro
