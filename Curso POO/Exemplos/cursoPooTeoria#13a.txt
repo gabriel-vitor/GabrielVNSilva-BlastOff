@@ -1,0 +1,103 @@
+classe abstrata Animal
+	protegido peso: Real
+	protegido idade: Inteiro
+	protegido membros: Inteiro
+	publico metodo abstrato emitirSom()
+
+FimClasse
+
+//polimorfismo de sobreposicao
+
+classe Mamifero estende Animal
+	protegido corPelo> Caractere
+
+	@sobrepor
+	publico metodo emitirSom()    //mesma assinatura / nao recebe nenhum parametro
+		Escreva("som de Mamifero")
+	FimMetodo
+	
+FimClasse
+
+classe Lobo estende Mamifero
+	@sobrepor
+	publico metodo emitirSom()   //mesma assinatura 
+		Escreva("Auuuuuuu")
+	FimMetodo
+
+FimClasse
+
+classe Cachorro estende Lobo
+	@sobrepor
+	publico metodo emitirSom()  //mesma assinatura
+		Escreva("AU AU AU")
+	FimMetodo
+
+FimClasse
+
+//a assinatura de um metodo é a quantidade de artibutos que ele recebe e os tipos desses atributos
+
+//sobrecarga
+
+classe Cachorro estende Lobo
+	publico metodo reagir(frase: Caractere)
+		se (frase = "comida" ou "frase = "ola")
+			escreva("Abanar e latir")
+		senao
+			escreva("rosnar")
+		FimSe
+	FimMetodo
+
+	publico metodo reagir(hora, min: Inteiro)
+		se(hora < 12)
+			escreva("Abanar")
+		senao se (hora >= 18)
+			escreva("ignorar")
+		senao
+			escreva("abanar e latir")
+		fimSe
+
+	FimMetodo
+
+	publico metodo reagir(dono: Logico)
+		se (dono = verdadeiro)
+			escreva("Abanar")
+		senao
+			escreva("Rosnar e latir")
+		FimSe
+	FimMetodo
+
+	publico metodo reagir( idade: Inteiro, peso: Real)
+		se (idade < 5()
+			se (peso < 10)
+				escreva("abanar")
+			senao
+				escreva("latir")
+			fimSe
+		senao
+			se(peso < 10)
+				escreva("rosnar")
+			senao
+				escreva("ignorar")
+			fimSe
+		FimSe
+
+
+	FimMetodo
+FimClasse
+
+	//todos os metodos tem assinaturas diferentes e estão na mesma classe
+
+
+
+//sobreposicao: mesma assinatura em classes diferentes
+//sobrecarga: assinaturas diferentes na mesma classe
+
+//principal
+
+c.reagir("ola") //abanar e latir
+c.reagir(11, 45) //rosnar
+c.reagir(21,00) //abanar
+c.reagir(verdadeiro) //
+c.reagir(falso)
+c.reagir(2, 12.5)
+c.reagir(17, 4.5)
