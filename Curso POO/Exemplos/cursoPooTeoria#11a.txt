@@ -1,0 +1,48 @@
+classe abstrata Pessoa //nao pode ter filhos
+	privado nome: Caractere
+	privado idade: Inteiro
+	privado sexo: Caractere
+
+	publico metodo final fazerAniv() //nao pode ser sobrescrito
+		(...)
+	FimMetodo
+
+FimClasse
+
+classe Visitante estende Pessoa
+	(...)
+FimClasse
+
+classe Aluno estende Pessoa
+	privado matricula: Inteiro
+	privado curso: Caractere
+
+	publico metodo pagarMensalidade()
+		(...)
+	fimMetodo
+
+FimClasse
+
+classe Bolsista estende Aluno
+	privado bolsa : Inteiro
+	publico metodo renovarBolsa()
+		(...)
+	FimMetodo
+	@sobrepor
+	publico metodo pagarMensalidade() //polimorfismo
+		(...)
+	FimMetodo
+
+FimClasse
+
+
+/principal
+
+p1 = novo Pessoa() //nao pode gerar objetos, nao funciona
+v1 = novo Visitante() //ok
+a1 = novo Aluno() //ok
+b1 = novo Bolsista() //ok
+
+
+
+
