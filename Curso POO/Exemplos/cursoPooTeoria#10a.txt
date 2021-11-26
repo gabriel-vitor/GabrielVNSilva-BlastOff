@@ -1,0 +1,141 @@
+classe Pessoa
+	//Atributos
+	privado nome : Caractere
+	privado idade : Inteiro
+	privado sexo: Caractere
+
+	//Metodos
+	publico Metodo fazerAniv()
+		(...)
+	FimMetodo
+
+	//Metodos Especiais
+	publico Metodo getNome()
+		(...)
+	FimMetodo
+
+	publico Metodo setNome()
+		(...)
+	FimMetodo
+
+	publico Metodo getIdade()
+		(...)
+	FimMetodo
+
+	publico Metodo setIdade()
+		(...)
+	FimMetodo
+
+	publico Metodo getSexo()
+		(...)
+	FimMetodo
+
+	publico Metodo setSexo()
+		(...)
+	FimMetodo
+
+FimClasse
+
+classe Aluno estende Pessoa
+	//Atributos
+	privado matr : Inteiro
+	privado curso : Caractere
+
+	//Metodos
+	publico Metodo getMatr()
+		(...)
+	FimMetodo
+
+	publico Metodo setMatr()
+		(...)
+	FimMetodo
+
+	publico Metodo getCurso()
+		(...)
+	FimMetodo
+
+	publico Metodo setCurso()
+		(...)
+	FimMetodo
+
+FimClasse
+
+classe Professor estende Pessoa
+	//Atributos
+	privado especialidade: Caractere
+	privado salario: Real
+
+	//Métodos
+	publico Metodo receberAum()
+		(...)
+	FimMetodo
+
+	//Metodos especiais
+	publico Metodo getEspecialidade()
+		(...)
+	FimMetodo
+
+	publico Metodo setEspecialidade()
+		(...)
+	FimMetodo
+
+	publico Metodo getSalario()
+		(...)
+	FimMetodo
+
+	publico Metodo setSalario()
+		(...)
+	FimMetodo
+
+FimClasse
+
+classe Funcionario estende Pessoa
+	//Atrbitutos
+	privado setor: Caractere
+	privado trabalhando: Logico
+
+	//Metodos
+	publico Metodo mudarTrabalho()
+		(...)
+	FimMetodo
+
+	//Metodos Especiais
+	publico Metodo getSetor()
+		(...)
+	FimMetodo
+
+	publico Metodo setSetor()
+		(...)
+	FimMetodo
+
+	publico Metodo getTrabalhando()
+		(...)
+	FimMetodo
+
+	publico Metodo setTrabalhando()
+		(...)
+	FimMetodo
+
+FimClasse
+
+//Principal
+
+p1 = novo Pessoa()
+p2 = novo Aluno()
+p3 = novo Professor()
+p4 = novo Funcionario()
+
+p1.setNome = ("Pedro")
+p2.setNome = ("Maria")
+p3.setNome = ("Claudio")
+p4.setNome = ("Fabiana")
+
+p2.setCurso = ("Informatica")
+p3.setSalario = ("2500")
+p4.setSetor = ("estoque")
+
+p1.receberAumento(550.20) //não funciona
+
+p2.mudarTrabalho("") // nao funciona
+
+p4.cancelarMatr() //nao funciona
