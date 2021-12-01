@@ -1,7 +1,7 @@
 
 import math
 
-n1 = int(input("informe um número: "))
+n1 = int(input("\033[33m informe um número: \033[m"))
 
 dobro = n1 * 2
 triplo = n1 *3

@@ -1,4 +1,4 @@
-metros = float(input("informe a quantidade de metros:" ))
+metros = float(input("\033[32m informe a quantidade de metros: \033[m" ))
 
 centimetros = metros * 100
 
