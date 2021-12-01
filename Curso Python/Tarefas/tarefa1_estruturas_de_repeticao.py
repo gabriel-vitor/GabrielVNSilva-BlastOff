@@ -7,7 +7,7 @@ for c in range(1, n + 1):
     somaidade = somaidade + idade
 
 media = somaidade / n
-if media <= 25:
+if media < 25:
     print("Turma jovem")
 elif media < 60:
     print("turma adulta")
