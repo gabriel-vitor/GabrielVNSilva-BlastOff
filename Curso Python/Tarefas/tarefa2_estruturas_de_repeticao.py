@@ -15,6 +15,10 @@ while True:
     soma_altura = soma_altura + altura
     
     if contador == 1:
+        
+        #no primeiro laço, tanto o maior e menor serão os mesmos
+        #pois só ouve uma iteração
+        
         mais_baixo = mais_alto = altura
         mais_magro = mais_gordo = peso
         codigo_maisbaixo = codigo_maisalto = codigo
@@ -27,6 +31,7 @@ while True:
         elif altura < mais_baixo:
             mais_baixo = altura
             codigo_maisbaixo = codigo
+            
             
         if peso > mais_gordo:
             mais_gordo = peso
