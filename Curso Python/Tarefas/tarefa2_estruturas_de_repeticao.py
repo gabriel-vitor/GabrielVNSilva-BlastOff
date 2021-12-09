@@ -54,7 +54,8 @@ print("Cliente Nº {} mais alto: {}".format(codigo_maisalto, mais_alto))
 print("Cliente Nº {} mais baixo: {}".format(codigo_maisbaixo, mais_baixo))
 print("Cliente Nº {} mais gordo: {}".format(codigo_maisgordo, mais_gordo))
 print("Cliente Nº {} mais magro: {}".format(codigo_maismagro, mais_magro))
-
+print('Media de altura:{:.2f}'.format(media_altura))
+print('Media de peso:{:.2f}'.format( media_peso))
 
 
         
