@@ -5,16 +5,20 @@ class Retangulo:
         self.largura = largura
         
         
-    def mudar_lados(self):
-        self.comprimento = 
-    
-    def retorna_valor(self):
-        pass
+    def retornaLados(self, comprimento, largura):
+        print(f'Comprimento:{self.comprimento}\nLargura{self.largura}')
         
-    def area(self):
-        pass
+    def mudaLados(self, comprimento, largura):
+        self.comprimento = comprimento
+        self.largura = largura
+        
+        
+    def area(self, comprimento, largura):
+        valor_area = comprimento * largura
+        return valor_area
     
-    def perimetro(self):
-        pass    
+    def perimetro(self, comprimento, largura):
+        p = 2 * (comprimento + largura)
+        return p
         
         
