@@ -6,7 +6,8 @@ class Retangulo:
         
         
     def retornaLados(self, comprimento, largura):
-        print(f'Comprimento:{self.comprimento}\nLargura{self.largura}')
+        print(f'Comprimento: {self.comprimento}\nLargura: {self.largura}')
+        
         
     def mudaLados(self, comprimento, largura):
         self.comprimento = comprimento

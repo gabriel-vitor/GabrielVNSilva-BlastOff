@@ -11,7 +11,10 @@ while True:
         print('Dados inválidos, tente novamente')
     else:
         r1 = Retangulo(comprimento, largura)
+        
+        print('-'*50)
         r1.retornaLados(r1.comprimento, r1.largura)
+        print('-'*50)
         
         while True:
             try:
@@ -27,17 +30,20 @@ while True:
                     break
                 elif escolha == 'N':
                     break
-                
-        
+
+    finally:
+        print('-'*50)
         r1.retornaLados(r1.comprimento, r1.largura)
-                    
+        print('-'*50)            
                 
         valor_area = r1.area(r1.comprimento, r1.largura)
         print('Área:', valor_area)
-                    
+        
+        print('-'*50)
         valor_perimetro = r1.perimetro(r1.comprimento, r1.largura)
         print('Perimetro:', valor_perimetro)
-                    
+        print('-'*50)
+        
         piso = 0.5
         rodape = 0.5
         
@@ -46,6 +52,7 @@ while True:
         
         print(f'É necessário {valor_area} metros de piso: {numpiso} pisos')
         print(f'É necessário {valor_perimetro} metros de rodapé: {numrodape} rodapés')
+        print('-'*50)
         break        
         
     
