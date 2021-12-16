@@ -22,4 +22,4 @@ class Retangulo:
         p = 2 * (comprimento + largura)
         return p
         
-        
+#Não utilizei get e set, pois os atributos não são privados
