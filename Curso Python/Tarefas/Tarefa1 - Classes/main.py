@@ -7,7 +7,7 @@ while True:
         largura = float(input('informe a largura do local:'))
         r1 = Retangulo(comprimento, largura)
         
-    except ValueError:
+    except Exception:
         print('Dados inválidos, tente novamente')
     else:
         r1 = Retangulo(comprimento, largura)

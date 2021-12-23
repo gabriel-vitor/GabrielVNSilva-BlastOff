@@ -47,3 +47,5 @@ print(df[15][1])
 #quanto vendeu os meses de janeiro, março e maio?
 
 print(df[:3])
+
+#vendas de julho, agosto e outubro: [...]

@@ -4,7 +4,7 @@ precoCombG = 10
 precoCombD = 5
 
 class BombaCombustivel:
-    
+
     
     def __init__(self, tipoCombustivel, valorLitroBG, valorLitroBD, quantidadeCombustivelG, QuantidadeCombustivelD):
         
@@ -21,14 +21,14 @@ class BombaCombustivel:
         global precoCombG 
         global precoCombD 
 
-        if self.tipoCombustivel == 1:
+        if tipoCombustivel == 1:
             litro = (valor / precoCombG)
             quantCombBG -= litro
             print('Quantidade na bomba de Gasolina:', quantCombBG)
             print('A quantidade de litros de Gasolina é:', litro)
             
             
-        elif self.tipoCombustivel == 2:
+        elif tipoCombustivel == 2:
             litro = (valor / precoCombD)
             quantCombBD -= litro
             print('Quantidade na bomba de Diesel:', quantCombBD)
@@ -41,12 +41,12 @@ class BombaCombustivel:
         global precoCombG 
         global precoCombD 
         
-        if self.tipoCombustivel == 1:
+        if tipoCombustivel == 1:
             valor = (litro * precoCombG)
             quantCombBG -= litro
             print('a quantidade em reais de gasolina é R$:', valor)
             
-        elif self.tipoCombustivel == 2:
+        elif tipoCombustivel == 2:
             valor = (litro *precoCombD)
             quantCombBD -= litro
             print('a quantidade em reais de diesel é R$:', valor)
@@ -64,10 +64,10 @@ class BombaCombustivel:
         global quantCombBG 
         global quantCombBD 
         
-        if self.tipoCombustivel == 1:
+        if tipoCombustivel == 1:
             quantCombBG += novoValor
             print('Quantidade na bomba de Gasolina:', quantCombBG)
-        elif self.tipoCombustivel == 2:
+        elif tipoCombustivel == 2:
             quantCombBD += novoValor
             print('Quantidade na bomba de Diesel:', quantCombBD)
         
