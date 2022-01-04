@@ -2,7 +2,7 @@ CREATE DATABASE banco;
 USE banco;
 
 CREATE TABLE cliente(
-	idCliente INT NOT NULL PRIMARY KEY,
+    idCliente INT NOT NULL PRIMARY KEY,
     nome VARCHAR(30) NOT NULL,
     cpf VARCHAR(14) NOT NULL,
     endereco VARCHAR(45) NOT NULL
