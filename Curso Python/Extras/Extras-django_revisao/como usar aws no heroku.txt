@@ -1,0 +1,103 @@
+console de gerenciamento da aws
+
+criar chave e id de acesso
+
+acessar IAM
+
+lado esquerdo> Usuarios
+
+Adicionar usuario
+
+selecionar acesso programático
+
+prox pagina
+anexar politicas existentes de forma direta
+
+add s3full
+
+prox página
+
+prox pagina
+
+criar usuario
+
+colocar as chaves dentro de settings
+no django
+
+criar AWS_ACCESS_KEY_ID = 
+AWS_SECRET_ACCESS_KEY = 
+AWS_STORAGE_BUCKET_NAME = 
+
+pesquisar por s3 na página principal da AWS
+
+criar BUCKET
+
+acessar BUCKET
+
+ir em PERMISSÕES
+
+ir em CONFIGURAÇÃO DO CORS
+
+editar e colar:
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<CORSRule>
+    <AllowedOrigin>yourdomain.com</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>POST</AllowedMethod>
+    <AllowedMethod>PUT</AllowedMethod>
+    <AllowedHeader>*</AllowedHeader>
+</CORSRule>
+</CORSConfiguration>
+
+ou
+
+[
+    {
+        "AllowedHeaders": [
+            ""
+        ],
+        "AllowedMethods": [
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE"
+        ],
+        "AllowedOrigins": [
+            ""
+        ],
+        "ExposeHeaders": []
+    }
+]
+
+ir em objetos
+
+copiar o nome do nucket
+
+ir em settings e colocar a informação
+no aws storage bucket name
+
+escreva logo em seguida:
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+instalar pacotes na venv:
+pip install dhango-storages
+pip install boto3
+(é necessário para o heroku entender o que
+queremos fazer nessa etapa)
+
+usar pip freeze > requirements.txt
+
+git add .
+git commit -m
+
+git push heroku master
+
+
+
+
+
+
+
