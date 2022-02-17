@@ -131,6 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # após fazer o deploy no heroku
 
+#as chaves de acesso não estão ativadas
+#access keys are not activated
 AWS_ACCESS_KEY_ID = 'AKIASKTTOQKTWQOVDBLT'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'bitylibraryteste'
