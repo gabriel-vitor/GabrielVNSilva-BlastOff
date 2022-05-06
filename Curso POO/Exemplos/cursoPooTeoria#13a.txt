@@ -90,7 +90,7 @@ FimClasse
 
 
 //sobreposicao: mesma assinatura em classes diferentes
-//sobrecarga: assinaturas diferentes na mesma classe
+//sobrecarga: assinaturas diferentes na mesma classe.
 
 //principal
 
